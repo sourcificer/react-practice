@@ -1,0 +1,19 @@
+html,
+body {
+    background-color: #81a69b;
+    margin: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: azure;
+    font-weight: lighter;
+}
+
+h1,
+h3,
+h2 {
+    font-weight: lighter;
+}
+
+#pet-list {
+    margin-top: 2rem;
+    margin-left: 3rem;
+}
