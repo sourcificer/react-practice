@@ -1,14 +1,14 @@
 import React from "react";
 import { render } from "react-dom";
-import Pet from "./Pet";
+import SearchParams from "./SearchParams";
 
-const greeting = () => {
+const App = () => {
   return (
     <div id="second-heading greets">
       <h2>Welcome!</h2>
-      <Pet name="Luna" animal="cat" breed="dontKnow" />
+      <SearchParams />
     </div>
   );
 };
 
-render(React.createElement(greeting), document.getElementById("index-main"));
+render(<App />, document.getElementById("index-main"));

@@ -9,9 +9,11 @@
     ],
     "rules": {
         "react/prop-types": 0, // A weak type checking which javascript does, not useful when using TypeScript
-        "no-console": 1
-    }
-    "plugins": ["react", "import", "jsx-a11y"],
+        "no-console": 1,
+        "react-hooks/rules-of-hooks": 2,
+        "react-hooks/exhaustive-deps": 1
+    },
+    "plugins": ["react", "import", "jsx-a11y", "react-hooks"],
     "parserOptions": {
         "ecmaVersion": 2019,
         "sourceType": "module",
