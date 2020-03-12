@@ -33,10 +33,9 @@ parimary key.
 
 ### effects ( effectul code )
 
-```
-:x: React Hook useEffect contains a call to 'setState'. Without a list of dependencies, this can lead to an infinite chain of updates. To fix this, pass [setState, animal] as a second argument to the useEffect Hook.
-```
-
+<table>
+<tr> <td>❌<span class="error" style="color:Red">Error:</span></td><td>React Hook useEffect contains a call to 'setState'. Without a list of dependencies, this can lead to an infinite chain of updates. To fix this, pass [setState, animal] as a second argument to the useEffect Hook.</td></tr>
+</table>
 The dependencies in the above prompt refers to the "parameters" that the hook useEffect depends on.
 This is because the useEffect function is executed every time the page reRenders even if there is no
 change in any of its parameter and thereby no change in the properties it is setting.
