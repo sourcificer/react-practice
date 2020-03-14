@@ -59,8 +59,7 @@ Now we do know that setBreeds and setBreed are not going to change as long as th
 
 ### ErrorBoundary
 
-In laymann's terms, ErrorBoundary will allow you to catch errors without crashing the program.
-When a unhandled error occurs in production mode it umnounts ( removes it from "existance" ) the component it happens in.
+In laymann's terms, ErrorBoundary will allow you to catch errors without crashing the program. When a unhandled error occurs in production mode it umnounts ( removes it from "existance" ) the component it happens in.
 
 ```
 class ComponentB extends React.Component {
