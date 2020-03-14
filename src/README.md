@@ -56,3 +56,40 @@ in the above snippet the useEffect function only depends on the animal property 
 Now we do know that setBreeds and setBreed are not going to change as long as the useEffect() is not executed but we need to pass them as dependencies because useEffect in-a-way do depend on them as without the setBreed and/or setBreeds method ( and maybe without their individual hooks ) the useEffect method will not be able to execute some of its statements particularly the ones executing the given two dependant methods. In laymann terms, the setBreeds, setBreed and animal properties are used inside the useEffect() function and they are decalared outside the function thereby useEffect is dependant on them hence dependancies.
 
 > To execute it once pass empty list ( `[]` ) as the second argument of useEffect
+
+### ErrorBoundary
+
+In laymann's terms, ErrorBoundary will allow you to catch errors without crashing the program.
+When a unhandled error occurs in production mode it umnounts ( removes it from "existance" ) the component it happens in.
+
+```
+class ComponentB extends React.Component {
+  render() {
+    return (
+      <ErrorBoundary>
+        <div className="cName">
+          <ComponentA media={media} />
+          <div>
+            <h1>{propOne}</h1>
+            <h2>{`${propTwo} - ${propThree}`}</h2>
+            <button>Action {propOne}</button>
+            <p>{propOneDetails}</p>
+          </div>
+        </div>
+      </ErrorBoundary>
+    );
+  }
+}
+```
+
+What we are trying to implement in the above class component is for ErrorBoundary to be able to catch error inside ComponentB but the ErrorBoundary component will be able to handle/catch errors in ComponentA but it will not be able to handle errors of the `<div className="cname">` ( i.e it cannot handle/catch errors inside the class its in). Therefore to achieve the above result you will have to make it a higher order component:
+
+```
+function ComponentBWithErrorBoundary(props) {
+  return (
+    <ErrorBoundary>
+      <ComponentB {...props} />
+    </ErrorBoundary>
+  );
+}
+```
