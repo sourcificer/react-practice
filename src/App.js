@@ -11,12 +11,12 @@ const App = () => {
     <ThemeContext.Provider value={themeHook}>
       <div id="second-heading greets">
         <header>
-          <Link to="/"> Welcome! </Link>{" "}
-        </header>{" "}
+          <Link to="/"> Welcome! </Link>
+        </header>
         <Router>
           <SearchParams path="/" />
           <Details path="/details/:id" />
-        </Router>{" "}
+        </Router>
       </div>
     </ThemeContext.Provider>
   );
